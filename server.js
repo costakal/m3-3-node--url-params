@@ -21,6 +21,20 @@ app.get("/top50", (req, res) => {
   });
 });
 
+app.get("/top50/song/:id", (req, res) => {
+  let currentSong = {};
+  const id = req.params.id;
+  top50.forEach((song) => {
+    if (song.rank == id) {
+      currentSong = song;
+    }
+  });
+  res.render("pages/song-page", {
+    title: `Song ${currentSong.rank}`,
+    song: currentSong,
+  });
+});
+
 // handle 404s
 app.get("/", (req, res) => {
   res.status(404);

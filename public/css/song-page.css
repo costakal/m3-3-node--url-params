@@ -1,1 +1,30 @@
 /* song page css */
+
+.songbox {
+  position: relative;
+  margin: 40px 450px;
+  min-width: 500px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 0px 15px #888888;
+}
+
+.sp-title {
+  display: block;
+  margin: 15px;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+.sp-artist {
+  margin: 25px;
+  text-align: center;
+  border: none;
+}
+.sp-streams {
+  margin: 15px;
+  text-align: center;
+
+  border: none;
+  padding: 50px;
+  font-size: 200px;
+}
