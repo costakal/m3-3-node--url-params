@@ -1,0 +1,7 @@
+<%- include('../partials/header') %>
+<ul>
+    <% top50.map(song => { %>
+        <li><%=`Number ${song.rank}. ${song.title}`%></li>
+        <% }); %>
+</ul>
+<%- include('../partials/footer') %>
