@@ -4,4 +4,6 @@
     <h3 class="artist sp-artist"><%= song.artist %></h3>
     <h3 class="streams sp-streams"><%= song.streams %></h3>
 </div>
+<a class="buttons" href=<%=song.rank + 1%>>Next Song</a>
+<a class="buttons" href=<%=song.rank - 1%>>Previous Song</a>
 <%- include('../partials/footer') %>

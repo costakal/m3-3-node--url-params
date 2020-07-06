@@ -28,3 +28,15 @@
   padding: 50px;
   font-size: 200px;
 }
+
+.buttons {
+  position: relative;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.buttons:hover {
+  color: grey;
+}
