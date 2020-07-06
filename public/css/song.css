@@ -1,1 +1,56 @@
-/* song css */
+.item {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 15% 60% 25%;
+  grid-column-gap: 20px;
+  border-bottom: solid black 1px;
+}
+
+.grid-1 {
+  margin-left: 20px;
+  margin-right: 20px;
+  justify-content: center;
+}
+
+.grid-2 {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.grid-3 {
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+  top: 80px;
+}
+
+.rank {
+  display: inline-block;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.streams {
+  display: block;
+  color: darkgrey;
+  padding-bottom: 15px;
+}
+
+.title {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.artist {
+  display: block;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.date {
+  display: block;
+  font-size: 15px;
+  color: darkgray;
+}
