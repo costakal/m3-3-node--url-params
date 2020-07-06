@@ -27,11 +27,17 @@ app.get("/top50/song/:id", (req, res) => {
   top50.forEach((song) => {
     if (song.rank == id) {
       currentSong = song;
+      res.render("pages/song-page", {
+        title: `Song ${currentSong.rank}`,
+        song: currentSong,
+      });
+    } else if (id > 50 || id < 1) {
+      res.status(404);
+      res.render("pages/fourOhFour", {
+        title: "I got nothing",
+        path: req.originalUrl,
+      });
     }
-  });
-  res.render("pages/song-page", {
-    title: `Song ${currentSong.rank}`,
-    song: currentSong,
   });
 });
 
