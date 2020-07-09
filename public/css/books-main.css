@@ -1,0 +1,24 @@
+.book-item {
+  display: grid;
+  grid-template-columns: 20% 25%;
+  border-bottom: black solid 1px;
+}
+
+.book-cover {
+  margin: 20px;
+  height: 200px;
+  width: 150px;
+}
+
+.book-title {
+  margin-top: 50px;
+  margin-bottom: 0;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.book-author {
+  margin-top: 15px;
+  font-size: 20px;
+  font-style: italic;
+}

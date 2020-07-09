@@ -1,0 +1,13 @@
+<%- include('../partials/header') %>
+<div class="bookpage-section">
+    <div class=bookpage-grid>
+        <img class ="bp-cover" src="<%=book.imgUrl%>">
+        <div class="bp-info">
+            <h3 class="bp-title"><%= book.title %> <span class= "bp-type">(<%=book.type%>)</span></h3>
+            <h3 class="bp-author">By: <%= book.author %></h3>
+            <p class="bp-description"><%= book.description %></p>
+            <p class="bp-code">Book Code: <span><a href=""><%=book.id%></a></span></p>
+        </div>
+    </div>
+</div>
+<%- include('../partials/footer') %>

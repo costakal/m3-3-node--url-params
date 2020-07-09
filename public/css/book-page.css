@@ -1,0 +1,36 @@
+.bookpage-section {
+  position: relative;
+  margin: 40px 80px 40px 80px;
+  min-width: 500px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 0px 15px #888888;
+}
+
+.bookpage-grid {
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+
+.bp-cover,
+.bp-info {
+  margin: 40px;
+}
+
+.bp-title {
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.bp-author {
+  margin-top: 15px;
+  margin-bottom: 4px;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.bp-description {
+  margin: 20px 0px;
+}

@@ -2,6 +2,7 @@
 const morgan = require("morgan");
 
 const { top50 } = require("./data/top50");
+const { books } = require("./data/books");
 
 const PORT = process.env.PORT || 8000;
 
@@ -40,6 +41,30 @@ app.get("/top50/song/:id", (req, res) => {
     }
   });
 });
+
+// Book Functions
+
+const handleBooks = (req, res) => {
+  res.status(200).render("pages/books", { title: "List of Classics", books });
+};
+
+const handleBookPage = (req, res) => {
+  const id = req.params.id;
+  let currentBook = {};
+  books.forEach((book) => {
+    if (book.id == id) {
+      currentBook = book;
+      res.render("pages/book-page", {
+        title: `${currentBook.title} `,
+        book: currentBook,
+      });
+    }
+  });
+};
+
+// Book endpoint
+app.get("/books", handleBooks);
+app.get("/book-page/:id", handleBookPage);
 
 // handle 404s
 app.get("/", (req, res) => {
