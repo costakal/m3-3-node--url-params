@@ -1,10 +1,11 @@
 <%- include('../partials/header') %>
+<%- include('../partials/sort-buttons') %>
 
 <% books.map(book => { %>
 <div class="book-item">
     <img class="book-cover" src="<%=book.imgUrl%>">
     <div>
-        <h3 class="book-title"><%=book.title%></h3>
+        <a class="title-link" href="/book-page/<%=book.id%>"><h3 class="book-title"><%=book.title%></h3></a>
         <h3 class="book-author">By: <%=book.author%></h3>
         <p class="book-type"><%=book.type%></p>
     </div>

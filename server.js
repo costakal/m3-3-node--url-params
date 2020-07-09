@@ -62,9 +62,23 @@ const handleBookPage = (req, res) => {
   });
 };
 
+const handleTypeSort = (req, res) => {
+  const id = req.params.id;
+  let filteredBooks = books.filter((book) => {
+    if (book.type == id) {
+      return book;
+    }
+  });
+  res.render("pages/book-type", {
+    title: `Books Genre: ${id}`,
+    books: filteredBooks,
+  });
+};
+
 // Book endpoint
 app.get("/books", handleBooks);
 app.get("/book-page/:id", handleBookPage);
+app.get("/book-page/type/:id", handleTypeSort);
 
 // handle 404s
 app.get("/", (req, res) => {
